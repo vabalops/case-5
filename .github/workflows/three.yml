@@ -24,6 +24,9 @@ jobs:
       - name: setup something
         run: |
           chmod +x script.sh
+          echo "running script"
           ./script.sh
+          echo "running tf"
           terraform version
+          echo "running aws cli"
           aws s3 ls --region us-east-1
