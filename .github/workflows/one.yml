@@ -35,3 +35,13 @@ jobs:
               run: sleep 10 && echo "This is step two"
             - name: step three
               run: echo "This is step three"
+    job-four:
+        runs-on: ubuntu-latest
+        needs: job-one
+        steps:
+            - name: step one
+              run: sleep 10 && echo "This is step one"
+            - name: step two
+              run: sleep 10 && echo "This is step two"
+            - name: step three
+              run: echo "This is step three"
